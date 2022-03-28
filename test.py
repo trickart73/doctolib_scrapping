@@ -52,16 +52,16 @@ try:
 finally:
         print("end")
 
-try:
-    elementBookingMotive = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.ID, "booking_motive"))
-    )
-    print(elementBookingMotive.text)
-    elementBookingMotive.click()
-    Select s = new Select(driver.findElement(By.id("booking_motive")))
-    s.selectByValue(“Testing”)
-finally:
-        print("end")
+# try:
+#     elementBookingMotive = WebDriverWait(driver, 10).until(
+#     EC.presence_of_element_located((By.ID, "booking_motive"))
+#     )
+#     print(elementBookingMotive.text)
+#     elementBookingMotive.click()
+#     Select s = new Select(driver.findElement(By.id("booking_motive")))
+#     s.selectByValue(“Testing”)
+# finally:
+#         print("end")
 
 
 
