@@ -41,7 +41,7 @@ try:
     elementOui.click()
 finally:
         # driver.quit()
-        print("end")
+        print("elementOui")
 
 try:
     elementAuCabinet = WebDriverWait(driver, 10).until(
@@ -49,18 +49,32 @@ try:
     )
     elementAuCabinet.click()
 finally:
-        print("end")
+        print("elementAuCabinet")
+
+try:
+    elementBookingMotive = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.ID, "booking_motive"))
+    )
+    print(elementBookingMotive.text)
+    elementBookingMotive.click()
+    elementBookingMotive.send_keys(Keys.DOWN)
+    elementBookingMotive.send_keys(Keys.DOWN)
+    elementBookingMotive.send_keys(Keys.ENTER)
+    # Select s = new Select(driver.findElement(By.id("booking_motive")))
+    # s.selectByValue(“Testing”)
+finally:
+        print("elementBookingMotive")
 
 # try:
-#     elementBookingMotive = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.ID, "booking_motive"))
+#     elementDispo = WebDriverWait(driver, 10).until(
+#     EC.presence_of_element_located((By.CLASS_NAME, "availabilities-message"))
 #     )
-#     print(elementBookingMotive.text)
-#     elementBookingMotive.click()
-#     Select s = new Select(driver.findElement(By.id("booking_motive")))
-#     s.selectByValue(“Testing”)
+#     print(elementDispo.text)
+#     buttonDispo = elementDispo.find_elements(by=By.CLASS_NAME, value="dl-button-link-primary")
+#     buttonDispo.click()
+#     # elementDispo.click()
 # finally:
-#         print("end")
+#         print("elementDispo")
 
 
 
