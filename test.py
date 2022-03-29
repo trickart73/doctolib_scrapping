@@ -55,23 +55,33 @@ try:
     elementBookingMotive = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.ID, "booking_motive"))
     )
-    print(elementBookingMotive.text)
+    # print(elementBookingMotive.text)
     elementBookingMotive.click()
     elementBookingMotive.send_keys(Keys.DOWN)
     elementBookingMotive.send_keys(Keys.DOWN)
     elementBookingMotive.send_keys(Keys.ENTER)
-    # Select s = new Select(driver.findElement(By.id("booking_motive")))
-    # s.selectByValue(“Testing”)
 finally:
         print("elementBookingMotive")
 
+
+try:
+    elementDispo = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CLASS_NAME, "availabilities-message"))
+    )
+    # print(elementDispo.text)
+    # buttonDispo = elementDispo.find_elements(by=By.CLASS_NAME, value="dl-button-link-primary")
+    # buttonDispo.click()
+    # elementDispo.click()
+finally:
+        print("elementDispo")
+
 # try:
 #     elementDispo = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.CLASS_NAME, "availabilities-message"))
+#     EC.presence_of_element_located((By.CLASS_NAME, "availabilities-slot"))
 #     )
-#     print(elementDispo.text)
-#     buttonDispo = elementDispo.find_elements(by=By.CLASS_NAME, value="dl-button-link-primary")
-#     buttonDispo.click()
+#     print(elementDispo.get_attribute("title"))
+#     # buttonDispo = elementDispo.find_elements(by=By.CLASS_NAME, value="dl-button-link-primary")
+#     # buttonDispo.click()
 #     # elementDispo.click()
 # finally:
 #         print("elementDispo")
